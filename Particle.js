@@ -1,12 +1,13 @@
 class Particle{
     constructor({context, particle, width,height, size, force}){
         this.context = context
-        this.noise = (Math.random() * 3.14 * 0.05)
+        this.noise = (Math.random() * 3.14 * 0.1) + 0.01
         this.x = Math.random() * width
         this.y = Math.random() * height
         this.originalX = particle.x
         this.originalY = particle.y
         this.color = particle.color
+		this.originalColor = particle.color
         this.size = size
         this.force = force
         this.vX = 0
@@ -22,8 +23,8 @@ class Particle{
             this.vX = forceSize * Math.cos(angle)
             this.vY = forceSize * Math.sin(angle)
         }
-        this.vX *= this.noise * 2
-        this.vY *= this.noise * 2
+        this.vX *= this.noise
+        this.vY *= this.noise
         this.x += (this.originalX - this.x) * this.noise + this.vX
         this.y += (this.originalY - this.y) * this.noise + this.vY
     }

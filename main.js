@@ -52,7 +52,7 @@ const useForce = () => {
   return [force, updateFoce]
 }
 const main = () => {
-  const size = 2000 / canvas.width;
+  const size = 3
   canvas.width = window.innerWidth
   canvas.height =  window.innerHeight
   ctx.fillStyle = getGradientColor({context : ctx, width : canvas.width})
@@ -61,7 +61,7 @@ const main = () => {
 		context : ctx,
 		width : canvas.width, 
 		height : canvas.height,
-		pixelDensity : size * 1.5
+		pixelDensity : size + 1
 	  })
 	  const [force,updateForce] = useForce()
 	  const particles = pixelsArray.map(
