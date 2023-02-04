@@ -22,8 +22,8 @@ class Particle{
             this.vX = forceSize * Math.cos(angle)
             this.vY = forceSize * Math.sin(angle)
         }
-        this.vX *= this.noise * 0.01 
-        this.vY *= this.noise * 0.01
+        this.vX *= this.noise * 2
+        this.vY *= this.noise * 2
         this.x += (this.originalX - this.x) * this.noise + this.vX
         this.y += (this.originalY - this.y) * this.noise + this.vY
     }
