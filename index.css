@@ -8,5 +8,6 @@ body {
     overflow: hidden;
 }
 #app {
+	overflow: hidden;
     background-color: black;
 }

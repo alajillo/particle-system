@@ -1,7 +1,7 @@
 class Particle{
     constructor({context, particle, width,height, size, force}){
         this.context = context
-        this.noise = (Math.random() * 3.14 * 0.05)
+        this.noise = (Math.random() * 3.14 * 0.05) + 0.05
         this.x = Math.random() * width
         this.y = Math.random() * height
         this.originalX = particle.x
